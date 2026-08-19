@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../../srvd/sap/zui_rrpaystreammap_o4/0001/$metadata">
+        <edmx:Include Namespace="com.sap.gateway.srvd.zui_rrpaystreammap_o4.v0001" Alias="SAP__ParentService"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd_f4.i_taxcode.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="I_TaxCodeType">
+                <Key>
+                    <PropertyRef Name="TaxCalculationProcedure"/>
+                    <PropertyRef Name="TaxCode"/>
+                </Key>
+                <Property Name="TaxCalculationProcedure" Type="Edm.String" Nullable="false" MaxLength="6"/>
+                <Property Name="TaxCode" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="TaxCode_Text" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="TaxType" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="TargetTaxCode" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="EUTaxClassification" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="IsSalesTaxes" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="TaxCategory" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="UnitedStatesTaxCategory" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="TaxReturnCountry" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="TaxTolerancePercent" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="1"/>
+                <Property Name="EUAcqnInputTaxCode" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="EUAcqnOutputTaxCode" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="TaxCodeIsInactive" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="MiniOneStopShopTxRptgCntry" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="OneStopShopTaxReportingCountry" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="OneStopShopScheme" Type="Edm.String" Nullable="false" MaxLength="1"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="I_TaxCode" EntityType="com.sap.gateway.srvd_f4.i_taxcode.v0001.I_TaxCodeType"/>
+            </EntityContainer>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxCalculationProcedure">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Schema"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Schema (Preisfindung, Nachrichten, Kontenfindung, ...)"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KALSM_D"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxCode">
+                <Annotation Term="SAP__common.Text" Path="TaxCode_Text"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Steuerkennzeichen"/>
+                <Annotation Term="SAP__common.Heading" String="Steuer-Kn"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Umsatzsteuerkennzeichen"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FIS_MWSKZ"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxCode_Text">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="SteuerKennzchnName"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name des Steuerkennzeichens"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxType">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Steuerart"/>
+                <Annotation Term="SAP__common.Heading" String="Art"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MWART"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TargetTaxCode">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Zielsteuerkennz."/>
+                <Annotation Term="SAP__common.Heading" String="ZielStKnz."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Zielsteuerkennzeichen (für gestundete Steuer)"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FARP_DZMWSK"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/EUTaxClassification">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="EU-Kennzg/Kennzg"/>
+                <Annotation Term="SAP__common.Heading" String="EU-KZ/KZ"/>
+                <Annotation Term="SAP__common.QuickInfo" String="EU-Kennzeichnung/Kennzeichnung"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=EGRKZ"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxCategory">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__common.Label" String="Steuerkategorie"/>
+                <Annotation Term="SAP__common.Heading" String="St"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Steuerkategorie im Kontenstamm"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SMWSK"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/UnitedStatesTaxCategory">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Steuerkategorie"/>
+                <Annotation Term="SAP__common.Heading" String="St.Kateg."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Steuerkategorie bei US-Taxes"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TXIND_007A"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxReturnCountry">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Meldeland/-reg."/>
+                <Annotation Term="SAP__common.Heading" String="Stl"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Land/Region für Steuermeldung"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LAND1_STML"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/EUAcqnInputTaxCode">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Zielsteuerk. ESE"/>
+                <Annotation Term="SAP__common.Heading" String="Zielk.ESE"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Zielsteuerk. für gestundete EU Erwerbsteuer, Eingangssteuer"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=DZMWEE"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/EUAcqnOutputTaxCode">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Zielsteuerk. ESA"/>
+                <Annotation Term="SAP__common.Heading" String="Zielk.ESA"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Zielsteuerk. für gestundete EU Erwerbsteuer, Ausgangssteuer"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=DZMWEA"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/MiniOneStopShopTxRptgCntry">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__common.Label" String="OSS Steuermelde-L/R"/>
+                <Annotation Term="SAP__common.QuickInfo" String="OSS Steuermeldeland/-region"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MOSSC"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/OneStopShopTaxReportingCountry">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="OSS Steuermelde-L/R"/>
+                <Annotation Term="SAP__common.QuickInfo" String="OSS Steuermeldeland/-region"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MOSSC"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/OneStopShopScheme">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="OSS classification"/>
+                <Annotation Term="SAP__common.QuickInfo" String="OSS-Klassifizierung"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FOT_OSS_CLASSIFICATION"/>
+            </Annotations>
+            <Annotations Target="SAP__ParentService.ZC_RRPAYSTREAMMAPType/Mwskz">
+                <Annotation Term="SAP__common.ValueListMapping">
+                    <Record>
+                        <PropertyValue Property="Label" String="Steuerkennzeichen"/>
+                        <PropertyValue Property="CollectionPath" String="I_TaxCode"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="SAP__common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Mwskz"/>
+                                    <PropertyValue Property="ValueListProperty" String="TaxCode"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TaxCalculationProcedure"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TaxCode_Text"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TaxType"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TargetTaxCode"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EUTaxClassification"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="IsSalesTaxes"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TaxCategory"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="UnitedStatesTaxCategory"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TaxReturnCountry"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TaxTolerancePercent"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EUAcqnInputTaxCode"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EUAcqnOutputTaxCode"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TaxCodeIsInactive"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="MiniOneStopShopTxRptgCntry"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OneStopShopTaxReportingCountry"/>
+                                </Record>
+                                <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OneStopShopScheme"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType">
+                <Annotation Term="SAP__common.Label" String="Steuerkennzeichen"/>
+                <Annotation Term="SAP__common.SAPObjectNodeType">
+                    <Record>
+                        <PropertyValue Property="Name" String="SalesTaxCode"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/I_TaxCode">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="true"/>
+                        <PropertyValue Property="UnsupportedExpressions" EnumMember="SAP__capabilities.SearchExpressions/AND SAP__capabilities.SearchExpressions/NOT SAP__capabilities.SearchExpressions/group "/>
+                        <PropertyValue Property="SearchSyntax" String="https://url.sap/odata-search"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="100"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="5000"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="TextDirectionLayout" Bool="true"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                        <PropertyValue Property="UploadToFileShare" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/IsSalesTaxes">
+                <Annotation Term="SAP__common.Label" String="Kennzeichen: Steuerkennzeichen für Verkaufssteuern"/>
+                <Annotation Term="SAP__common.Heading" String="Verk.St."/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=XSLTA_007A"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxTolerancePercent">
+                <Annotation Term="SAP__common.Label" String="TolProzSatz"/>
+                <Annotation Term="SAP__common.Heading" String="Toleranz"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Toleranzprozentsatz für Steuerberechnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_TaxCodeType/TaxCodeIsInactive">
+                <Annotation Term="SAP__common.Label" String="Inaktiv"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Steuerkenneichen inaktiv setzen - keine weitere Nutzung"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=XINACT"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

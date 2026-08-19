@@ -1,0 +1,447 @@
+<mvc:View controllerName="rtl.paystreammap.paystreammap.controller.paystreammap"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <NavContainer id="navContainer" class="psMapPage">
+        <pages>
+            <Page id="listPage" title="{i18n>title}">
+                <content>
+                    <VBox class="psInputTheme sapUiContentPadding">
+                        <Panel headerText="{i18n>tablePanelHeader}" expandable="false" class="infoCard">
+                            <content>
+                                <Table id="mapTable"
+                                    mode="MultiSelect"
+                                    includeItemInSelection="true"
+                                    fixedLayout="true"
+                                    growing="true"
+                                    growingThreshold="50"
+                                    class="positionsDisplayTable"
+                                    items="{path: '/ZC_RRPAYSTREAMMAP', parameters: {$$updateGroupId: 'paystreamBatch', $orderby: 'ServiceProvider,Zahlart1,Ktart,Ldgrp,Shkzg,Dauerb'}}"
+                                    selectionChange="onSelectionChange">
+                                    <columns>
+                                        <Column width="10rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>serviceProvider}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress">
+                                                        <customData><core:CustomData key="field" value="ServiceProvider" writeToDom="false" /></customData>
+                                                    </Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/ServiceProvider}" liveChange="onColumnFilterLiveChange" placeholder="Filter">
+                                                    <customData><core:CustomData key="field" value="ServiceProvider" writeToDom="false" /></customData>
+                                                </Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="10rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>zahlart1}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress">
+                                                        <customData><core:CustomData key="field" value="Zahlart1" writeToDom="false" /></customData>
+                                                    </Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Zahlart1}" liveChange="onColumnFilterLiveChange" placeholder="Filter">
+                                                    <customData><core:CustomData key="field" value="Zahlart1" writeToDom="false" /></customData>
+                                                </Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="8rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>ktart}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress">
+                                                        <customData><core:CustomData key="field" value="Ktart" writeToDom="false" /></customData>
+                                                    </Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Ktart}" liveChange="onColumnFilterLiveChange" placeholder="Filter">
+                                                    <customData><core:CustomData key="field" value="Ktart" writeToDom="false" /></customData>
+                                                </Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="8rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>ldgrp}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress">
+                                                        <customData><core:CustomData key="field" value="Ldgrp" writeToDom="false" /></customData>
+                                                    </Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Ldgrp}" liveChange="onColumnFilterLiveChange" placeholder="Filter">
+                                                    <customData><core:CustomData key="field" value="Ldgrp" writeToDom="false" /></customData>
+                                                </Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="7rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>shkzg}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress">
+                                                        <customData><core:CustomData key="field" value="Shkzg" writeToDom="false" /></customData>
+                                                    </Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Shkzg}" liveChange="onColumnFilterLiveChange" placeholder="Filter">
+                                                    <customData><core:CustomData key="field" value="Shkzg" writeToDom="false" /></customData>
+                                                </Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="7rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>dauerb}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress">
+                                                        <customData><core:CustomData key="field" value="Dauerb" writeToDom="false" /></customData>
+                                                    </Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Dauerb}" liveChange="onColumnFilterLiveChange" placeholder="Filter">
+                                                    <customData><core:CustomData key="field" value="Dauerb" writeToDom="false" /></customData>
+                                                </Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="7rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>diffPost}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="DiffPost" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/DiffPost}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="DiffPost" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="7rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>koart}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="Koart" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Koart}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="Koart" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="10rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>saknr}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="Saknr" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Saknr}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="Saknr" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="7rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>mwskz}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="Mwskz" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Mwskz}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="Mwskz" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="10rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>kostl}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="Kostl" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Kostl}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="Kostl" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="10rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>wbsElement}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="WbsElement" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/WbsElement}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="WbsElement" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="7rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>blart}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="Blart" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Blart}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="Blart" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="14rem" hAlign="Begin">
+                                            <VBox>
+                                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                                    <Text text="{i18n>text}" />
+                                                    <Button icon="sap-icon://sort" type="Transparent" press="onColumnSortPress"><customData><core:CustomData key="field" value="Text" writeToDom="false" /></customData></Button>
+                                                </HBox>
+                                                <Input value="{ui>/fieldFilters/Text}" liveChange="onColumnFilterLiveChange" placeholder="Filter"><customData><core:CustomData key="field" value="Text" writeToDom="false" /></customData></Input>
+                                            </VBox>
+                                        </Column>
+                                        <Column width="8rem" hAlign="Center"><Text text="{i18n>rowActions}" /></Column>
+                                    </columns>
+                                    <items>
+                                        <ColumnListItem>
+                                            <cells>
+                                                <Input value="{ServiceProvider}"
+                                                    editable="{= %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= %{IsActiveEntity} !== true }"
+                                                    valueHelpRequest=".onServiceProviderVHRequest" />
+                                                <Input value="{Zahlart1}"
+                                                    editable="{= %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= %{IsActiveEntity} !== true }"
+                                                    valueHelpRequest=".onZahlart1VHRequest" />
+                                                <Input value="{Ktart}"
+                                                    editable="{= %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= %{IsActiveEntity} !== true }"
+                                                    valueHelpRequest=".onKtartVHRequest" />
+                                                <Input value="{Ldgrp}"
+                                                    editable="{= %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= %{IsActiveEntity} !== true }"
+                                                    valueHelpRequest=".onLdgrpVHRequest" />
+                                                <Input value="{Shkzg}"
+                                                    editable="{= %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= %{IsActiveEntity} !== true }"
+                                                    valueHelpRequest=".onShkzgVHRequest" />
+                                                <CheckBox selected="{Dauerb}"
+                                                    enabled="{= %{IsActiveEntity} !== true }" />
+                                                <CheckBox selected="{DiffPost}"
+                                                    enabled="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    select="onFieldChange" />
+                                                <Input value="{Koart}"
+                                                    editable="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    change="onFieldChange"
+                                                    valueHelpRequest=".onKoartVHRequest" />
+                                                <Input value="{Saknr}"
+                                                    editable="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    change="onFieldChange"
+                                                    valueHelpRequest=".onSaknrVHRequest" />
+                                                <Input value="{Mwskz}"
+                                                    editable="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    change="onFieldChange"
+                                                    valueHelpRequest=".onMwskzVHRequest" />
+                                                <Input value="{Kostl}"
+                                                    editable="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    change="onFieldChange"
+                                                    valueHelpRequest=".onKostlVHRequest" />
+                                                <Input value="{WbsElement}"
+                                                    editable="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    change="onFieldChange"
+                                                    valueHelpRequest=".onWbsVHRequest" />
+                                                <Input value="{Blart}"
+                                                    editable="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    showValueHelp="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    change="onFieldChange"
+                                                    valueHelpRequest=".onBlartVHRequest" />
+                                                <Input value="{Text}"
+                                                    editable="{= ${ui>/editMode} === 'multi' || %{IsActiveEntity} !== true }"
+                                                    change="onFieldChange" />
+                                                <HBox justifyContent="Center" renderType="Bare">
+                                                    <Button icon="sap-icon://display" type="Transparent" tooltip="{i18n>openSingleRecord}" press="onRowEditPress" visible="{= %{IsActiveEntity} === true &amp;&amp; ${ui>/activityMode} === '' }" />
+                                                </HBox>
+                                            </cells>
+                                        </ColumnListItem>
+                                    </items>
+                                </Table>
+                            </content>
+                        </Panel>
+                    </VBox>
+                </content>
+
+                <footer>
+                    <OverflowToolbar>
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://excel-attachment" type="Transparent" tooltip="Excel Download" enabled="{= ${ui>/activityMode} === '' }" press="onDownloadExcelPress" />
+                        <Button text="{i18n>edit}" icon="sap-icon://multi-select" type="Transparent" enabled="{= ${ui>/activityMode} === '' }" press="onMultiEditPress" />
+                        <Button text="{i18n>create}" icon="sap-icon://add" type="Transparent" enabled="{= ${ui>/activityMode} !== 'multi' }" press="onCreatePress" />
+                        <Button text="{i18n>delete}" icon="sap-icon://delete" type="Transparent" enabled="{= ${ui>/activityMode} !== 'multi' }" press="onDeletePress" />
+                        <Button text="{i18n>cancel}" icon="sap-icon://cancel" type="Transparent" visible="{= ${ui>/activityMode} === 'multi' || ${ui>/activityMode} === 'create' }" enabled="{= ${ui>/activityMode} === 'multi' || ${ui>/activityMode} === 'create' }" press="onCancelEditPress" />
+                        <Button text="{i18n>save}" icon="sap-icon://save" type="Emphasized" enabled="{ui>/hasPendingChanges}" press="onSavePress" />
+                        <Button icon="sap-icon://refresh" type="Transparent" enabled="{= ${ui>/activityMode} === '' }" tooltip="{i18n>refresh}" press="onRefreshPress" />
+                    </OverflowToolbar>
+                </footer>
+            </Page>
+
+            <Page id="singleEditPage" title="{i18n>singleEditPageTitle}" showNavButton="true" navButtonPress="onSingleEditBackPress">
+                <content>
+                    <VBox class="psInputTheme sapUiContentPadding">
+                        <Panel headerText="{i18n>singleEditPanelHeader}" expandable="false" class="infoCard">
+                            <content>
+                                <VBox class="sapUiMediumMargin">
+                                    <Label text="{i18n>serviceProvider}" />
+                                    <Text text="{ui>/singleEdit/ServiceProvider}" />
+                                    <Label text="{i18n>zahlart1}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Zahlart1}" />
+                                    <Label text="{i18n>ktart}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Ktart}" />
+                                    <Label text="{i18n>ldgrp}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Ldgrp}" />
+                                    <Label text="{i18n>shkzg}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Shkzg}" />
+                                    <Label text="{i18n>dauerb}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Dauerb}" />
+
+                                    <Label text="{i18n>diffPost}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/DiffPost}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/DiffPost}" visible="{= ${ui>/singleEditMode} === 'edit' }" liveChange="onSingleEditFieldLiveChange" />
+
+                                    <Label text="{i18n>koart}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Koart}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/Koart}" visible="{= ${ui>/singleEditMode} === 'edit' }" liveChange="onSingleEditFieldLiveChange" />
+
+                                    <Label text="{i18n>saknr}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Saknr}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/Saknr}" visible="{= ${ui>/singleEditMode} === 'edit' }"
+                                        showValueHelp="true" valueHelpRequest=".onSaknrVHRequest"
+                                        liveChange="onSingleEditFieldLiveChange" />
+
+                                    <Label text="{i18n>mwskz}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Mwskz}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/Mwskz}" visible="{= ${ui>/singleEditMode} === 'edit' }"
+                                        showValueHelp="true" valueHelpRequest=".onMwskzVHRequest"
+                                        liveChange="onSingleEditFieldLiveChange" />
+
+                                    <Label text="{i18n>kostl}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Kostl}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/Kostl}" visible="{= ${ui>/singleEditMode} === 'edit' }"
+                                        showValueHelp="true" valueHelpRequest=".onKostlVHRequest"
+                                        liveChange="onSingleEditFieldLiveChange" />
+
+                                    <Label text="{i18n>wbsElement}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/WbsElement}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/WbsElement}" visible="{= ${ui>/singleEditMode} === 'edit' }"
+                                        showValueHelp="true" valueHelpRequest=".onWbsVHRequest"
+                                        liveChange="onSingleEditFieldLiveChange" />
+
+                                    <Label text="{i18n>blart}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Blart}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/Blart}" visible="{= ${ui>/singleEditMode} === 'edit' }"
+                                        showValueHelp="true" valueHelpRequest=".onBlartVHRequest"
+                                        liveChange="onSingleEditFieldLiveChange" />
+
+                                    <Label text="{i18n>text}" class="sapUiSmallMarginTop" />
+                                    <Text text="{ui>/singleEdit/Text}" visible="{= ${ui>/singleEditMode} === 'display' }" />
+                                    <Input value="{ui>/singleEdit/Text}" visible="{= ${ui>/singleEditMode} === 'edit' }" liveChange="onSingleEditFieldLiveChange" />
+                                </VBox>
+                            </content>
+                        </Panel>
+                    </VBox>
+                </content>
+                <footer>
+                    <Toolbar>
+                        <ToolbarSpacer />
+                        <Button text="{i18n>cancel}" icon="sap-icon://cancel" type="Transparent" press="onSingleEditBackPress" />
+                        <Button text="{i18n>edit}" icon="sap-icon://edit" type="Transparent" enabled="{= ${ui>/singleEditMode} === 'display' }" press="onSingleEditEditPress" />
+                        <Button text="{i18n>save}" icon="sap-icon://save" type="Emphasized" enabled="{= ${ui>/singleEditMode} === 'edit' }" press="onSingleEditSavePress" />
+                    </Toolbar>
+                </footer>
+            </Page>
+        </pages>
+
+        <dependents>
+            <SelectDialog id="ktartSelectDialog"
+                title="{i18n>vhKtartTitle}"
+                search="onKtartVHSearch"
+                confirm="onKtartVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_KTART_VH', parameters: {}}">
+                <StandardListItem title="{DomainValue}" description="{DomainText}" />
+            </SelectDialog>
+
+            <SelectDialog id="shkzgSelectDialog"
+                title="{i18n>vhShkzgTitle}"
+                search="onShkzgVHSearch"
+                confirm="onShkzgVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_SHKZG_VH', parameters: {}}">
+                <StandardListItem title="{DomainValue}" description="{DomainText}" />
+            </SelectDialog>
+
+            <SelectDialog id="koartSelectDialog"
+                title="{i18n>vhKoartTitle}"
+                search="onKoartVHSearch"
+                confirm="onKoartVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_KOART_VH', parameters: {}}">
+                <StandardListItem title="{DomainValue}" description="{DomainText}" />
+            </SelectDialog>
+
+            <SelectDialog id="ldgrpSelectDialog"
+                title="{i18n>vhLdgrpTitle}"
+                search="onLdgrpVHSearch"
+                confirm="onLdgrpVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_LDGRP_VH', parameters: {}}">
+                <StandardListItem title="{LedgerGroup}" description="{LedgerGroupName}" />
+            </SelectDialog>
+
+            <SelectDialog id="spSelectDialog"
+                title="{i18n>vhServiceProviderTitle}"
+                search="onSPVHSearch"
+                confirm="onSPVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_PAYSTREAMSP_VH', parameters: {}}">
+                <StandardListItem title="{service_provider}" description="{company_name}" info="{bukrs}" />
+            </SelectDialog>
+
+            <SelectDialog id="zahlart1SelectDialog"
+                title="{i18n>vhZahlart1Title}"
+                search="onZahlart1VHSearch"
+                confirm="onZahlart1VHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_PAYSTREAMKS_VH', parameters: {}}">
+                <StandardListItem title="{Zahlart1}" description="{Text}" />
+            </SelectDialog>
+
+            <SelectDialog id="saknrGLSelectDialog"
+                title="{i18n>vhSaknrTitle}"
+                search="onSaknrGLVHSearch"
+                confirm="onSaknrVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_SAKNR_GL_VH', parameters: {}}">
+                <StandardListItem title="{GLAccount}" description="{GLAccountName}" />
+            </SelectDialog>
+
+            <SelectDialog id="saknrDebSelectDialog"
+                title="{i18n>vhSaknrDebTitle}"
+                search="onSaknrDebVHSearch"
+                confirm="onSaknrDebVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_SAKNR_DEB_VH', parameters: {}}">
+                <StandardListItem title="{Customer}" description="{CustomerName}" info="{City}" />
+            </SelectDialog>
+
+            <SelectDialog id="mwskzSelectDialog"
+                title="{i18n>vhMwskzTitle}"
+                search="onMwskzVHSearch"
+                confirm="onMwskzVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_MWSKZ_VH', parameters: {}}">
+                <StandardListItem title="{TaxCode}" description="{TaxCodeName}" />
+            </SelectDialog>
+
+            <SelectDialog id="kostlSelectDialog"
+                title="{i18n>vhKostlTitle}"
+                search="onKostlVHSearch"
+                confirm="onKostlVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_KOSTL_VH', parameters: {}}">
+                <StandardListItem title="{kostl}" description="{ktext}" />
+            </SelectDialog>
+
+            <SelectDialog id="wbsSelectDialog"
+                title="{i18n>vhWbsTitle}"
+                search="onWbsVHSearch"
+                confirm="onWbsVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_WBS_VH', parameters: {}}">
+                <StandardListItem title="{posid}" description="{post1}" />
+            </SelectDialog>
+
+            <SelectDialog id="blartSelectDialog"
+                title="{i18n>vhBlartTitle}"
+                search="onBlartVHSearch"
+                confirm="onBlartVHConfirm"
+                cancel="onVHCancel"
+                items="{path: '/ZI_RR_BLART_VH', parameters: {}}">
+                <StandardListItem title="{AccountingDocumentType}" description="{AccountingDocumentTypeName}" />
+            </SelectDialog>
+        </dependents>
+    </NavContainer>
+</mvc:View>

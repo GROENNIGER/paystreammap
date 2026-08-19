@@ -1,0 +1,94 @@
+/* Full-width fix: remove FLP shell container width limit */
+.sapUiMedia-Std-Desktop .sapUShellApplicationContainer.sapUShellApplicationContainerLimitedWidth,
+.sapUiMedia-Std-Tablet .sapUShellApplicationContainer.sapUShellApplicationContainerLimitedWidth {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+.sapUShellApplicationContainerLimitedWidth > .sapUiComponentContainer,
+.sapUShellApplicationContainerLimitedWidth > .sapUiComponentContainer > div,
+.sapUShellApplicationContainerLimitedWidth .sapUiView {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+
+/* Paystreaminput-inspired theme for freestyle maintenance app */
+.psMapPage {
+	background: linear-gradient(180deg, #f4f8fc 0%, #edf3fb 100%);
+}
+
+.psInputTheme {
+	min-height: 100%;
+}
+
+.infoCard {
+	border: 1px solid #dbe3ec;
+	border-radius: 0.9rem;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 251, 255, 0.99));
+	box-shadow: 0 1px 2px rgba(21, 49, 79, 0.05), 0 8px 22px rgba(21, 49, 79, 0.03);
+	overflow: hidden;
+}
+
+.infoCard .sapMPanelHdr {
+	background: linear-gradient(90deg, #0a6ed1, #67a5e8);
+	color: #ffffff;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+}
+
+/* Header row background - no padding overrides so SAP aligns headers+cells naturally */
+.positionsDisplayTable thead tr {
+	background: linear-gradient(180deg, #f9fbff 0%, #eef4fb 100%);
+}
+
+.positionsDisplayTable thead tr th {
+	background: transparent;
+	border-bottom: 2px solid #d5e0ee;
+}
+
+.positionsDisplayTable thead tr th .sapMText,
+.positionsDisplayTable thead tr th .sapMTitle {
+	color: #25415f;
+	font-weight: 700;
+}
+
+/* Header checkbox column: transparent only, no other overrides */
+.positionsDisplayTable thead tr th.sapMListTblSelCol {
+	background: transparent !important;
+}
+
+/* Data rows */
+.positionsDisplayTable tbody tr:nth-child(even) {
+	background: #fbfdff;
+}
+
+.positionsDisplayTable tbody tr:hover {
+	background: #eef5ff;
+}
+
+.positionsDisplayTable tbody tr td {
+	border-bottom: 1px solid #edf1f6;
+	vertical-align: middle;
+}
+
+.positionsDisplayTable .sapMInputBaseContentWrapper {
+	border-radius: 0.45rem;
+}
+
+.positionsDisplayTable .sapMInputBaseInner {
+	font-weight: 600;
+	color: #1f3348;
+}
+
+/* Display mode: remove default gray readonly look and align with card/table styling */
+.positionsDisplayTable .sapMInputBaseReadonly .sapMInputBaseContentWrapper {
+	background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+	border: 1px solid #d7e3f1;
+	box-shadow: none;
+}
+
+.positionsDisplayTable .sapMInputBaseReadonly .sapMInputBaseInner {
+	background: transparent;
+	color: #33516f;
+	opacity: 1;
+}
