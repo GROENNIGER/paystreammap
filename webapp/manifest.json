@@ -1,4 +1,4 @@
-{
+﻿{
   "_version": "1.60.0",
   "sap.app": {
     "id": "rtl.paystreammap.paystreammap",
@@ -59,7 +59,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.120.37",
+      "minUI5Version": "1.136.8",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {}
@@ -129,3 +129,4 @@
     }
   }
 }
+
